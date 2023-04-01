@@ -16,8 +16,8 @@ StringProperty::StringProperty(std::string name, std::string value)
 StringProperty* StringProperty::clone() const
 {
 	// À compéter: alloue un nouvel objet identique à this et retourne le pointeur
-	StringProperty* sp = new StringProperty(getName(), m_value);
-	return sp;
+	StringProperty* p = new StringProperty(getName(), m_value);
+	return p;
 }
 
 std::string StringProperty::getValueAsString() const
@@ -30,5 +30,6 @@ std::ostream& StringProperty::printToStream(std::ostream& o) const
 {
 	// À compéter
 	indent(o);
-	return o << getName() << " : " << getValueAsString();
+	o << getName() << ": " << getValueAsString() << std::endl;
+	return o;
 }

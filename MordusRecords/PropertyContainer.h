@@ -16,6 +16,8 @@ using PropertyPtr = std::unique_ptr<class BaseProperty>;
 using PropertyContainer = std::list<PropertyPtr>;
 using PropertyBaseIterator = PropertyContainer::iterator;
 using PropertyBaseIterator_const = PropertyContainer::const_iterator;
+//using PropertyBaseIterator = std::vector<PropertyPtr>::iterator;
+//using PropertyBaseIterator_const = std::vector<PropertyPtr>::const_iterator;
 
 class PropertyIterator : public PropertyBaseIterator
 {

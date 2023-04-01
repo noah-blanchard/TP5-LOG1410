@@ -16,8 +16,8 @@ Link::Link(std::string linkType, const Record& rec1, const Record& rec2, bool bi
 Link* Link::clone() const
 {
 	// À compéter: alloue un nouvel objet identique à this et retourne le pointeur
-	Link* lp = new Link(m_linkType, m_record1, m_record2, m_bidirectional);
-	return lp;
+	Link* p = new Link(m_linkType, m_record1, m_record2, m_bidirectional);
+	return p;
 }
 
 std::ostream& operator<<(std::ostream& o, const Link& link)

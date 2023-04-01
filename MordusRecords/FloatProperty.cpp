@@ -16,8 +16,8 @@ FloatProperty::FloatProperty(std::string name, float f)
 FloatProperty* FloatProperty::clone() const
 {
 	// À compéter: alloue un nouvel objet identique à this et retourne le pointeur
-	FloatProperty* fp = new FloatProperty(getName(), m_value);
-	return fp;
+	FloatProperty* p = new FloatProperty(getName(), m_value);
+	return p;
 }
 
 std::string FloatProperty::getValueAsString() const
@@ -30,5 +30,6 @@ std::ostream& FloatProperty::printToStream(std::ostream& o) const
 {
 	// À compéter
 	indent(o);
-	return o << getName() << " : " << getValueAsString();
+	o << getName() << ": " << getValueAsString() << std::endl;
+	return o;
 }

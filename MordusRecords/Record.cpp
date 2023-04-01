@@ -16,8 +16,8 @@ Record::Record(std::string title)
 Record* Record::clone() const
 {
 	// À compéter: alloue un nouvel objet identique à this et retourne le pointeur
-	Record* rp = new Record(m_properties.getName());
-	return rp;
+	Record* r = new Record(m_properties.getName());
+	return r;
 }
 
 DateProperty& Record::addProperty(std::string name, int day, int month, int year)
@@ -25,8 +25,8 @@ DateProperty& Record::addProperty(std::string name, int day, int month, int year
 	// À compléter: Ajouter une nouvelle propriété en fournissant un objet qui sera copié
 	//              retourner la référence à la propriété qui vient d'être copiée en convertissant 
 	//              son type au bon type dérivé
-	BaseProperty& bp = m_properties.addProperty(DateProperty(name, day, month, year));
-	return dynamic_cast<DateProperty&>(bp);
+	BaseProperty& p = m_properties.addProperty(DateProperty(name, day, month, year));
+	return dynamic_cast<DateProperty&>(p);
 }
 
 IntProperty& Record::addProperty(std::string name, int value)
@@ -34,8 +34,8 @@ IntProperty& Record::addProperty(std::string name, int value)
 	// À compléter: Ajouter une nouvelle propriété en fournissant un objet qui sera copié
 	//              retourner la référence à la propriété qui vient d'être copiée en convertissant 
 	//              son type au bon type dérivé
-	BaseProperty& bp = m_properties.addProperty(IntProperty(name, value));
-	return dynamic_cast<IntProperty&>(bp);
+	BaseProperty& p = m_properties.addProperty(IntProperty(name, value));
+	return dynamic_cast<IntProperty&>(p);
 }
 
 FloatProperty& Record::addProperty(std::string name, float value)
@@ -43,8 +43,8 @@ FloatProperty& Record::addProperty(std::string name, float value)
 	// À compléter: Ajouter une nouvelle propriété en fournissant un objet qui sera copié
 	//              retourner la référence à la propriété qui vient d'être copiée en convertissant 
 	//              son type au bon type dérivé
-	BaseProperty& bp = m_properties.addProperty(FloatProperty(name, value));
-	return dynamic_cast<FloatProperty&>(bp);
+	BaseProperty& p = m_properties.addProperty(FloatProperty(name, value));
+	return dynamic_cast<FloatProperty&>(p);
 }
 
 SectionProperty& Record::addProperty(std::string name)
@@ -52,8 +52,8 @@ SectionProperty& Record::addProperty(std::string name)
 	// À compléter: Ajouter une nouvelle propriété en fournissant un objet qui sera copié
 	//              retourner la référence à la propriété qui vient d'être copiée en convertissant 
 	//              son type au bon type dérivé
-	BaseProperty& bp = m_properties.addProperty(SectionProperty(name));
-	return dynamic_cast<SectionProperty&>(bp);
+	BaseProperty& p = m_properties.addProperty(SectionProperty(name));
+	return dynamic_cast<SectionProperty&>(p);
 }
 
 StringProperty& Record::addProperty(std::string name, std::string value)
@@ -61,8 +61,8 @@ StringProperty& Record::addProperty(std::string name, std::string value)
 	// À compléter: Ajouter une nouvelle propriété en fournissant un objet qui sera copié
 	//              retourner la référence à la propriété qui vient d'être copiée en convertissant 
 	//              son type au bon type dérivé
-	BaseProperty& bp = m_properties.addProperty(StringProperty(name, value));
-	return dynamic_cast<StringProperty&>(bp);
+	BaseProperty& p = m_properties.addProperty(StringProperty(name, value));
+	return dynamic_cast<StringProperty&>(p);
 }
 
 URLProperty& Record::addProperty(std::string name, std::string displayText, std::string URL)
@@ -70,8 +70,8 @@ URLProperty& Record::addProperty(std::string name, std::string displayText, std:
 	// À compléter: Ajouter une nouvelle propriété en fournissant un objet qui sera copié
 	//              retourner la référence à la propriété qui vient d'être copiée en convertissant 
 	//              son type au bon type dérivé
-	BaseProperty& bp = m_properties.addProperty(URLProperty(name, displayText, URL));
-	return dynamic_cast<URLProperty&>(bp);
+	BaseProperty& p = m_properties.addProperty(URLProperty(name, displayText, URL));
+	return dynamic_cast<URLProperty&>(p);
 }
 
 PropertyIterator Record::begin()
@@ -105,12 +105,4 @@ void Record::deleteProperty(PropertyIterator_const child)
 std::ostream& operator<<(std::ostream& o, const Record& rec)
 {
 	return o << rec.m_properties << std::endl;
-	// need to show every property of m_properties donc il faut un for
-	// d'abord on met le nom de la section
-	/*o << rec.m_properties << std::endl;
-	for (auto it = rec.cbegin(); it != rec.cend(); ++it)
-	{
-		o << *it << std::endl;
-	}
-	return o;*/
 }

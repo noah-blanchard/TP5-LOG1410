@@ -1,1 +1,2 @@
-G:\Mon Drive\Polytechnique\Cours\S2\LOG1410 (seul)\LAB5\Projet VS non modifié - Copie\MordusRecordsVS\x64\Debug\MordusRecordsVS.exe
+G:\Mon Drive\Polytechnique\Cours\S2\LOG1410\LAB5\Projet VS non modifié\MordusRecordsVS\x64\Debug\MordusRecordsVS.exe
+G:\Mon Drive\Polytechnique\Cours\S2\LOG1410 (seul)\LAB5\Final\MordusRecordsVS\x64\Debug\MordusRecordsVS.exe

@@ -18,8 +18,8 @@ Record& RecordManager::addRecord(std::string name)
     // À compléter: ajouter une nouvelle fiche en construisant une fiche qui sera copiée
     // 	            insérer la copie dans le conteneur STL
     //              retourner la référence à la copie qui vient d'être créée
-	m_records.push_back(RecordPtr(new Record(name)));
-	return *m_records.back();
+    m_records.push_back(RecordPtr(new Record(name)));
+    return *m_records.back();
 }
 
 Record& RecordManager::addRecord(const Record& rec)
@@ -27,8 +27,8 @@ Record& RecordManager::addRecord(const Record& rec)
     // À compléter: ajouter une nouvelle fiche en clonant la fiche passée en paramètre
     // 	            insérer la copie dans le conteneur STL
     //              retourner la référence à la copie qui vient d'être créée
-	m_records.push_back(RecordPtr(rec.clone()));
-	return *m_records.back();
+    m_records.push_back(RecordPtr(rec.clone()));
+    return *m_records.back();
 }
 
 RecordIterator RecordManager::begin()

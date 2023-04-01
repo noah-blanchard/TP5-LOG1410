@@ -29,6 +29,7 @@ Link& LinkManager::addLink(const Link& link)
 	return *m_links.back();
 }
 
+
 LinkIterator LinkManager::begin()
 {
 	// À compléter
@@ -62,56 +63,56 @@ void LinkManager::deleteLink(LinkIterator_const child)
 LinkIterator LinkManager::findLinkName(std::string name)
 {
 	// À compléter : parcourir les éléments contenus dans le conteneur et retourner le 1er dont le nom d'un des 2 enregistrement correspond au nom passé en paramètre
-	//               si aucun élément ne correspond, retourner end()
-	for (auto it = m_links.begin(); it != m_links.end(); ++it)
+	for (auto it = begin(); it != end(); ++it)
 	{
-		if ((*it)->getRecord1().getTitle() == name || (*it)->getRecord2().getTitle() == name)
+		if ((it)->getRecord1().getTitle() == name || (it)->getRecord2().getTitle() == name)
 		{
 			return it;
 		}
 	}
-	return m_links.end();
-	
+	return end();
+
 }
 
 LinkIterator_const LinkManager::findLinkName(std::string name) const
 {
 	// À compléter : parcourir les éléments contenus dans le conteneur et retourner le 1er dont le nom d'un des 2 enregistrement correspond au nom passé en paramètre
 	//               si aucun élément ne correspond, retourner end()
-	for (auto it = m_links.cbegin(); it != m_links.cend(); ++it)
+	for (auto it = cbegin(); it != cend(); ++it)
 	{
-		if ((*it)->getRecord1().getTitle() == name || (*it)->getRecord2().getTitle() == name)
+		if (it->getRecord1().getTitle() == name || (it)->getRecord2().getTitle() == name)
 		{
 			return it;
 		}
 	}
-	return m_links.cend();
+	return cend();
 }
 
 LinkIterator LinkManager::findLinkType(std::string linkType)
 {
 	// À compléter : parcourir les éléments contenus dans le conteneur et retourner le 1er dont le type correspond au type passé en paramètre
 	//               si aucun élément ne correspond, retourner end()
-	for (auto it = m_links.begin(); it != m_links.end(); ++it)
+	for (auto it = begin(); it != end(); ++it)
 	{
-		if ((*it)->getLinkType() == linkType)
+		if ((it)->getLinkType() == linkType)
 		{
 			return it;
 		}
 	}
-	return m_links.end();
+	return end();
 }
 
 LinkIterator_const LinkManager::findLinkType(std::string linkType) const
 {
 	// À compléter : parcourir les éléments contenus dans le conteneur et retourner le 1er dont le type correspond au type passé en paramètre
 	//               si aucun élément ne correspond, retourner end()
-	for (auto it = m_links.cbegin(); it != m_links.cend(); ++it)
+	for (auto it = cbegin(); it != cend(); ++it)
 	{
-		if ((*it)->getLinkType() == linkType)
+		if ((it)->getLinkType() == linkType)
 		{
 			return it;
 		}
 	}
+	return cend();
 }
 

@@ -16,8 +16,8 @@ URLProperty::URLProperty(std::string name, std::string displayText, std::string 
 URLProperty* URLProperty::clone() const
 {
 	// À compéter: alloue un nouvel objet identique à this et retourne le pointeur
-	URLProperty* up = new URLProperty(getName(), m_displayText, m_URL);
-	return up;
+	URLProperty* p = new URLProperty(getName(), m_displayText, m_URL);
+	return p;
 }
 
 std::string URLProperty::getValueAsString() const
@@ -30,5 +30,6 @@ std::ostream& URLProperty::printToStream(std::ostream& o) const
 {
 	// À compéter
 	indent(o);
-	return o << m_displayText << " (" << m_URL << ")";
+	o << getName() << ": " << getValueAsString() << std::endl;
+	return o;
 }

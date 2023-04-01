@@ -15,8 +15,8 @@ IntProperty::IntProperty(std::string name, int i)
 IntProperty* IntProperty::clone() const
 {
 	// À compéter: alloue un nouvel objet identique à this et retourne le pointeur
-	IntProperty* ip = new IntProperty(getName(), m_value);
-	return ip;
+	IntProperty* p = new IntProperty(getName(), m_value);
+	return p;
 }
 
 std::string IntProperty::getValueAsString() const
@@ -29,5 +29,6 @@ std::ostream& IntProperty::printToStream(std::ostream& o) const
 {
 	// À compéter
 	indent(o);
-	return o << getName() << " : " << getValueAsString();
+	o << getName() << ": " << getValueAsString() << std::endl;
+	return o;
 }

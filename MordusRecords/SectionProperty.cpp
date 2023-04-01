@@ -17,15 +17,17 @@ SectionProperty::SectionProperty(const SectionProperty& rhs)
 	: BaseProperty(rhs)
 {
 	// À compléter: construire un objet identique à celui passé en argument en copiant tous ses enfants
-	for (auto it = rhs.cbegin(); it != rhs.cend(); ++it) {
+	for (auto it = rhs.cbegin(); it != rhs.cend(); ++it)
+	{
 		addProperty(*it);
-	}	
+	}
 }
 
 SectionProperty* SectionProperty::clone() const
 {
 	// À compéter: alloue un nouvel objet identique à this et retourne le pointeur
-	return new SectionProperty(*this);
+	SectionProperty* p = new SectionProperty(*this);
+	return p;	
 }
 
 std::string SectionProperty::getValueAsString(void) const
@@ -82,9 +84,9 @@ std::ostream& SectionProperty::printToStream(std::ostream& o) const
 	//             décrémenter l'indentation
 	indent(o);
 	o << getName() << std::endl;
-	m_indent++;
+	++m_indent;
 	for (auto it = cbegin(); it != cend(); ++it) {
-		o << *it << std::endl;
+		o << *it;
 	}
 	m_indent--;
 	return o;

@@ -1,2 +1,14 @@
-﻿  Link.cpp
-  MordusRecordsVS.vcxproj -> G:\Mon Drive\Polytechnique\Cours\S2\LOG1410 (seul)\LAB5\Projet VS non modifié - Copie\MordusRecordsVS\x64\Debug\MordusRecordsVS.exe
+﻿  BaseProperty.cpp
+  DateProperty.cpp
+  FloatProperty.cpp
+  IntProperty.cpp
+  Link.cpp
+  LinkManager.cpp
+  Mordus.cpp
+  Record.cpp
+  RecordManager.cpp
+  SectionProperty.cpp
+  StringProperty.cpp
+  URLProperty.cpp
+  Génération de code en cours...
+  MordusRecordsVS.vcxproj -> G:\Mon Drive\Polytechnique\Cours\S2\LOG1410 (seul)\LAB5\Final\MordusRecordsVS\x64\Debug\MordusRecordsVS.exe

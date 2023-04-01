@@ -14,19 +14,17 @@ BaseProperty& BaseProperty::addProperty(const BaseProperty& prop)
 {
 	// Ne rien ajouter et retourner un objet fictif obtenu par un itérateur fourni par le conteneur vide
 	return *(*(m_emptyContainer.begin()));
-
 }
 
 PropertyIterator BaseProperty::begin()
 {
 	// À compéter
 	return m_emptyContainer.begin();
-	
 }
 
 PropertyIterator BaseProperty::end()
 {
-	// À compéter
+	// À 
 	return m_emptyContainer.end();
 }
 
@@ -58,9 +56,5 @@ std::ostream& operator<<(std::ostream& o, const BaseProperty& prop)
 {
 	// À compéter
 	prop.printToStream(o);
-	/*for (auto it = prop..begin(); it != prop.end(); ++it)
-	{
-		o << **it;
-	}*/
 	return o;
 }

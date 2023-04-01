@@ -9,6 +9,7 @@
 #define EA_A455AA12_5B85_421c_8204_A2CC5B2D46B3__INCLUDED_
 
 #include "BaseProperty.h"
+#include <vector>
 
 class SectionProperty : public BaseProperty
 {
@@ -33,6 +34,7 @@ protected:
 
 private:
 	PropertyContainer m_propertyContainer;
+	//std::vector<PropertyPtr> m_propertyContainer;
 };
 
 #endif // !defined(EA_A455AA12_5B85_421c_8204_A2CC5B2D46B3__INCLUDED_)
